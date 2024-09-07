@@ -14,14 +14,42 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.from-top,
+.from-left-side,
+.from-right-side,
+.from-bottom {
+  opacity: 0;
+  transition:
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out;
+}
+
+.from-top {
+  transform: translateY(-50%);
+}
+
+.from-left-side {
+  transform: translate(-20%, -10%);
+}
+
+.from-right-side {
+  transform: translate(20%, -10%);
+}
+
+.from-bottom {
+  transform: translateY(50%);
+}
+
+.from-top.slide-in-top,
+.from-left-side.slide-in-left-side,
+.from-right-side.slide-in-right-side,
+.from-bottom.slide-in-bottom {
+  transform: translate(0);
+  opacity: 1;
 }
