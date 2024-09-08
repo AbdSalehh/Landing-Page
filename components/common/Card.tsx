@@ -22,11 +22,18 @@ export const Card: FC<Props> = ({
     from,
   ) as unknown as RefObject<HTMLAnchorElement>;
 
+  const bgClasses = {
+    black: "bg-black",
+    fourth: "bg-fourth",
+    third: "bg-third",
+    white: "bg-white",
+  };
+
   return (
     <Link
       href={url}
       ref={cardRef}
-      className={`from-${from} group ${variant ? `bg-${variant}` : "bg-white"}`}
+      className={`from-${from} group ${variant ? bgClasses[variant as keyof typeof bgClasses] : "bg-white"}`}
     >
       <div
         className={cn(

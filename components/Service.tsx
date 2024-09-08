@@ -1,5 +1,9 @@
 import { Card } from "./common/Card";
 import { Container } from "./common/Container";
+import Link from "next/link";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { RefObject } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const services = [
   "Shelter of Victoria Bulbyna",
@@ -37,6 +41,10 @@ const services = [
 ];
 
 export const Service = (): JSX.Element => {
+  const linkRef = useScrollAnimation(
+    "left-side",
+  ) as unknown as RefObject<HTMLAnchorElement>;
+
   return (
     <Container className="bg-primary">
       <div className="space-y-9">
@@ -53,6 +61,18 @@ export const Service = (): JSX.Element => {
               <h1 className="px-5 py-9 text-center text-xl">{service}</h1>
             </Card>
           ))}
+        </div>
+        <div className="flex flex-wrap !pt-16">
+          <Link
+            href="#"
+            ref={linkRef}
+            className="from-left-side bg-third text-2xl"
+          >
+            <div className="flex items-center gap-2 border-[3.5px] border-black px-12 py-3 text-[22px] font-bold duration-200 group-hover:-translate-y-2 group-hover:translate-x-2 group-active:-translate-x-2 group-active:translate-y-2">
+              <p>apply for help</p>
+              <FaArrowRightLong />
+            </div>
+          </Link>
         </div>
       </div>
     </Container>
