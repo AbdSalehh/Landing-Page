@@ -78,7 +78,7 @@ export const Team = (): JSX.Element => {
             desire - to help.
           </p>
         </div>
-        <div className="sm:card grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
           {members.map(({ name, position, photo }, idx) => (
             <TeamCard from="bottom" key={idx}>
               <Image
