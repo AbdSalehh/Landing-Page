@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 const icons = [
   {
@@ -74,6 +75,7 @@ export const Hero = (): JSX.Element => {
             </Link>
           ))}
         </div>
+        <IoIosArrowDropdownCircle className="absolute -bottom-20 left-1/2 size-6 -translate-x-1/2 animate-bounce" />
       </div>
     </Container>
   );

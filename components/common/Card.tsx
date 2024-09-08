@@ -34,10 +34,11 @@ export const Card: FC<Props> = ({
       href={url}
       ref={cardRef}
       className={`from-${from} group ${variant ? bgClasses[variant as keyof typeof bgClasses] : "bg-white"}`}
+      onClick={(e) => e.preventDefault()}
     >
       <div
         className={cn(
-          "h-full border-[3.5px] duration-200 group-hover:-translate-y-3 group-hover:translate-x-3 group-active:-translate-x-3 group-active:translate-y-3",
+          "h-full border-[3.5px] duration-200 group-hover:-translate-y-3 group-hover:translate-x-3",
           className,
         )}
       >

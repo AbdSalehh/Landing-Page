@@ -18,6 +18,7 @@ export const LinkComp: FC<Props> = ({ className = "", url }): JSX.Element => {
       href={url}
       ref={linkRef}
       className="from-top group fixed right-8 top-8 z-10 bg-white text-2xl"
+      onClick={(e) => e.preventDefault()}
     >
       <div
         className={cn(

@@ -67,6 +67,7 @@ export const Service = (): JSX.Element => {
             href="#"
             ref={linkRef}
             className="from-left-side bg-third text-2xl"
+            onClick={(e) => e.preventDefault()}
           >
             <div className="flex items-center gap-2 border-[3.5px] border-black px-12 py-3 text-[22px] font-bold duration-200 group-hover:-translate-y-2 group-hover:translate-x-2 group-active:-translate-x-2 group-active:translate-y-2">
               <p>apply for help</p>
