@@ -15,27 +15,27 @@ const icons = [
   {
     name: "Youtube",
     link: "https://youtube.com",
-    icon: <FaYoutube className="size-9" />,
+    icon: <FaYoutube className="size-6 sm:size-9" />,
   },
   {
     name: "Instagram",
     link: "https://instagram.com",
-    icon: <FaInstagram className="size-9" />,
+    icon: <FaInstagram className="size-6 sm:size-9" />,
   },
   {
     name: "Facebook",
     link: "https://facebook.com",
-    icon: <FaFacebookF className="size-9" />,
+    icon: <FaFacebookF className="size-6 sm:size-9" />,
   },
   {
     name: "Patreon",
     link: "https://patreon.com",
-    icon: <FaPatreon className="size-9" />,
+    icon: <FaPatreon className="size-6 sm:size-9" />,
   },
   {
     name: "Telegram",
     link: "https://telegram.com",
-    icon: <FaTelegramPlane className="size-9" />,
+    icon: <FaTelegramPlane className="size-6 sm:size-9" />,
   },
 ];
 
@@ -45,9 +45,9 @@ export const Hero = (): JSX.Element => {
   const linkRef = useScrollAnimation("bottom");
 
   return (
-    <Container className="bg-primary">
-      <div className="relative flex items-center justify-center gap-11">
-        <div className="from-top relative size-44" ref={imageRef}>
+    <Container className="bg-primary px-10 py-44 sm:px-20 xl:px-0">
+      <div className="relative flex items-center justify-center gap-4 sm:gap-11">
+        <div className="from-top relative size-24 sm:size-44" ref={imageRef}>
           <ImageSlider
             images={["/hero-image1.svg", "/hero-image2.svg"]}
             className="absolute top-0"
@@ -55,14 +55,16 @@ export const Hero = (): JSX.Element => {
         </div>
         <div
           ref={titleRef}
-          className="from-right-side hero-title w-72 text-[3.35rem] font-bold leading-[1]"
+          className="from-right-side hero-title w-28 text-2xl font-bold leading-[1] sm:w-72 md:text-[3.35rem]"
         >
           Innovative Solutions for Animals
         </div>
       </div>
       <div ref={linkRef} className="from-bottom mt-7">
-        <p className="text-center text-3xl">charity organization</p>
-        <div className="mt-5 flex items-center justify-center gap-8">
+        <p className="text-center text-base sm:text-3xl">
+          charity organization
+        </p>
+        <div className="mt-12 flex items-center justify-center gap-6 sm:mt-5 sm:gap-8">
           {icons.map((icon) => (
             <Link
               href={icon.link}
@@ -75,7 +77,7 @@ export const Hero = (): JSX.Element => {
             </Link>
           ))}
         </div>
-        <IoIosArrowDropdownCircle className="absolute -bottom-20 left-1/2 size-6 -translate-x-1/2 animate-bounce" />
+        <IoIosArrowDropdownCircle className="absolute -bottom-36 left-1/2 size-6 -translate-x-1/2 animate-bounce sm:-bottom-20" />
       </div>
     </Container>
   );

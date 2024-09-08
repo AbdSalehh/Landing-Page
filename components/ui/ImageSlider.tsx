@@ -44,6 +44,7 @@ export default function ImageSlider({
             width={180}
             height={180}
             alt={`Kata: ${images[index]}`}
+            className="size-24 sm:size-44"
             priority
           />
         </motion.div>

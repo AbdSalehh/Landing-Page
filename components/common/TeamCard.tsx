@@ -23,7 +23,7 @@ export const TeamCard: FC<Props> = ({
     <div className={`from-${from} group bg-primary`} ref={cardRef}>
       <div
         className={cn(
-          "flex h-full flex-col items-center justify-start gap-2 border-[3.5px] border-black p-8 pb-11 duration-200 hover:scale-90",
+          "flex h-full flex-col items-center justify-start gap-2 border-[3.5px] border-black p-3 pb-5 duration-200 hover:scale-90 sm:p-8 sm:pb-11",
           className,
         )}
       >

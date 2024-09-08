@@ -25,10 +25,12 @@ const project = [
 export const Projects = (): JSX.Element => {
   return (
     <Container className="bg-secondary">
-      <div className="space-y-9 text-white">
-        <div className="space-y-7">
-          <h1 className="text-5xl font-bold">Our projects</h1>
-          <p className="text-3xl leading-[3rem]">
+      <div className="space-y-5 text-white md:space-y-9">
+        <div className="space-y-2 sm:space-y-3 md:space-y-7">
+          <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+            Our projects
+          </h1>
+          <p className="text-sm leading-6 sm:text-3xl md:leading-[3rem]">
             are very different in terms of priority, scale and complexity of
             implementation.
           </p>
@@ -38,11 +40,11 @@ export const Projects = (): JSX.Element => {
             <Card
               key={idx}
               variant={variant}
-              className="space-y-5 p-14 pr-20"
+              className="space-y-4 py-8 pl-12 pr-16 sm:space-y-5 sm:p-14 sm:pr-20"
               from="left-side"
             >
-              <h1 className="text-4xl font-bold">{title}</h1>
-              <p className="text-2xl">{description}</p>
+              <h1 className="text-2xl font-bold sm:text-4xl">{title}</h1>
+              <p className="text-md leading-5 sm:text-2xl">{description}</p>
             </Card>
           ))}
         </div>

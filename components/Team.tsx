@@ -68,26 +68,28 @@ const members = [
 export const Team = (): JSX.Element => {
   return (
     <Container className="overflow-y-hidden">
-      <div className="space-y-9">
-        <div className="space-y-7">
-          <h1 className="text-5xl font-bold">Our team</h1>
-          <p className="text-3xl leading-[3rem]">
+      <div className="space-y-5 md:space-y-9">
+        <div className="space-y-2 sm:space-y-3 md:space-y-7">
+          <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+            Our team
+          </h1>
+          <p className="text-sm leading-6 sm:text-3xl md:leading-[3rem]">
             consists of completely different people who are united by a common
             desire - to help.
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-8">
+        <div className="sm:card grid grid-cols-2 gap-8">
           {members.map(({ name, position, photo }, idx) => (
             <TeamCard from="bottom" key={idx}>
               <Image
                 src={photo}
                 alt={name}
-                width={155}
-                height={155}
+                width={150}
+                height={150}
                 className="grayscale"
               />
-              <h1 className="text-center text-lg">{name}</h1>
-              <p className="text-center">{position}</p>
+              <h1 className="text-center text-sm sm:text-lg">{name}</h1>
+              <p className="text-center text-xs sm:text-base">{position}</p>
             </TeamCard>
           ))}
         </div>

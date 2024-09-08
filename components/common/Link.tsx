@@ -22,7 +22,7 @@ export const LinkComp: FC<Props> = ({ className = "", url }): JSX.Element => {
     >
       <div
         className={cn(
-          "border-[3.5px] border-black px-2 py-1.5 duration-200 group-hover:-translate-y-2 group-hover:translate-x-2 group-active:-translate-x-2 group-active:translate-y-2",
+          "border-[3.5px] border-black px-2 py-1.5 text-base duration-200 group-hover:-translate-y-2 group-hover:translate-x-2 group-active:-translate-x-2 group-active:translate-y-2 sm:text-2xl",
           className,
         )}
       >

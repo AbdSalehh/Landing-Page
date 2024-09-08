@@ -9,18 +9,20 @@ export const About = (): JSX.Element => {
 
   return (
     <Container>
-      <div className="space-y-9">
-        <div className="space-y-7">
-          <h1 className="text-5xl font-bold">We are</h1>
-          <p className="text-3xl leading-[3rem]">
+      <div className="space-y-5 md:space-y-9">
+        <div className="space-y-2 sm:space-y-3 md:space-y-7">
+          <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">We are</h1>
+          <p className="text-sm leading-6 sm:text-3xl md:leading-[3rem]">
             team of like-minded people, socially active companies, media
             personalities, volunteers who help low-income shelters and foster
             carers to support homeless animals.
           </p>
         </div>
-        <div className="space-y-7">
-          <h1 className="text-5xl font-bold">Our primary goal</h1>
-          <p className="text-3xl leading-[3rem]">
+        <div className="space-y-2 sm:space-y-3 md:space-y-7">
+          <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+            Our primary goal
+          </h1>
+          <p className="text-sm leading-6 sm:text-3xl md:leading-[3rem]">
             is to provide animals with the most necessary things - food,
             medicine, and urgent needs for the livelihood of shelters. We
             believe in our power and the power of conscious citizens who care
@@ -31,13 +33,11 @@ export const About = (): JSX.Element => {
             lives. We all know the healing power of warmth, grace, and big
             loving eyes.
           </p>
-          <div className="border-third ml-14 space-y-2 border-l-4 px-4 py-3 text-3xl italic">
+          <div className="text-md ml-6 space-y-2 border-l-4 border-third px-4 py-3 italic sm:text-3xl md:ml-14">
             <p>&quot;Animals need to have friends. Just like humans.&quot;</p>
-            <p className="text-3xl italic">
-              - James Herriot, All Creatures Great and Small
-            </p>
+            <p>- James Herriot, All Creatures Great and Small</p>
           </div>
-          <p className="text-3xl leading-[3rem]">
+          <p className="text-sm leading-6 sm:text-3xl md:leading-[3rem]">
             Who else if not we should support our younger brothers, especially
             in difficult times? Let&apos;s be friends!
           </p>
@@ -49,7 +49,7 @@ export const About = (): JSX.Element => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-          className="from-bottom h-[581px] w-full border-4 border-black"
+          className="from-bottom h-48 w-full border-4 border-black sm:h-80 lg:h-[581px]"
         ></iframe>
       </div>
     </Container>
